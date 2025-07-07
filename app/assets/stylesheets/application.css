@@ -13,3 +13,172 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.side-bar {
+  background-color: #2f3e51;
+  height: 100vh;
+  width: 300px;
+}
+
+.side-bar__header {
+  align-items: center;
+  background-color: #253141;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.side-bar__header-name {
+  color: #fafafa;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.side-bar__header-link {
+  border: 1px solid lightblue;
+  color: deepskyblue;
+  display: block;
+  font-size: 10px;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.side-bar__content {
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  overflow: scroll;
+}
+
+.side-bar__room-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-bar__room-list__item {
+  list-style: none;
+  margin: 20px 0 40px;
+}
+
+.side-bar__room-list__item a {
+  color: white;
+  text-decoration: none;
+}
+
+.chat {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(100vw - 300px);
+}
+
+.chat__header {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.chat__header-name {
+  color: #333;
+  font-size: 24px;
+}
+
+.chat__header-link {
+  border: 1px solid darkred;
+  color: darkred;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.chat__messages {
+  height: calc(100vh - 100px - 90px);
+  overflow: scroll;
+  padding: 46px 40px 0;
+}
+
+.chat__messages-item+.chat__messages-item {
+  margin-top: 40px;
+}
+
+.chat__messages-name {
+  color: #434a54;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.chat__messages-date {
+  color: #999;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.chat__messages-content {
+  color: #434a54;
+  font-size: 14px;
+}
+
+.chat__form {
+  background-color: #ddd;
+  height: 90px;
+  padding: 20px 40px;
+}
+
+.chat__form form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat__form-wrap {
+  background-color: white;
+  display: flex;
+  width: 100%;
+}
+
+.chat__form-text {
+  background-color: white;
+  border: none;
+  display: block;
+  height: 50px;
+  padding: 10px;
+  width: 100%;
+}
+
+.chat__form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.chat__form-button {
+  background-color: #38aef0;
+  border: none;
+  cursor: pointer;
+  display: block;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
