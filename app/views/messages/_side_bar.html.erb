@@ -1,5 +1,5 @@
 <div class="side-bar__header">
-  <a href="" class="side-bar__header-name">神谷悟史</a>
+  <%= link_to current_user.name, edit_user_path(current_user), class: "side-bar__header-name" %>
   <a href="" class="side-bar__header-link">チャットを作成する</a>
 </div>
 
