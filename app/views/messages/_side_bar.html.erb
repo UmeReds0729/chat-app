@@ -1,40 +1,12 @@
 <div class="side-bar__header">
   <%= link_to current_user.name, edit_user_path(current_user), class: "side-bar__header-name" %>
-  <a href="" class="side-bar__header-link">チャットを作成する</a>
+  <%= link_to "チャットを作成する", new_room_path, class: "side-bar__header-link" %>
 </div>
 
 <div class="side-bar__content">
   <ul class="side-bar__room-list">
-    <li class="side-bar__room-list__item"><a href="">techroom1</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom2</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom3</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom4</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom5</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom6</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom7</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom8</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom9</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom10</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom11</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
-    <li class="side-bar__room-list__item"><a href="">techroom12</a></li>
+    <% current_user.rooms.each do |room| %>
+    <li class="side-bar__room-list__item"><%= link_to room.name %></li>
+    <% end %>
   </ul>
 </div>
