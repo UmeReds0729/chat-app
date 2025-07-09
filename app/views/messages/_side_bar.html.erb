@@ -6,7 +6,7 @@
 <div class="side-bar__content">
   <ul class="side-bar__room-list">
     <% current_user.rooms.each do |room| %>
-    <li class="side-bar__room-list__item"><%= link_to room.name %></li>
+    <li class="side-bar__room-list__item"><%= link_to room.name, room_messages_path(room) %></li>
     <% end %>
   </ul>
 </div>
