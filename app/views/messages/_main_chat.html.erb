@@ -4,24 +4,7 @@
 </div>
 
 <div class="chat__messages">
-  <div class="chat__messages-item">
-    <div class="chat__messages-name">神谷悟史<span class="chat__messages-date">2025/07/07 17:35:04</span></div>
-    <div class="chat__messages-content">
-      <p>テストテスト</p>
-    </div>
-  </div>
-  <div class="chat__messages-item">
-    <div class="chat__messages-name">神谷悟史<span class="chat__messages-date">2025/07/07 17:35:04</span></div>
-    <div class="chat__messages-content">
-      <p>テストテスト</p>
-    </div>
-  </div>
-  <div class="chat__messages-item">
-    <div class="chat__messages-name">神谷悟史<span class="chat__messages-date">2025/07/07 17:35:04</span></div>
-    <div class="chat__messages-content">
-      <p>テストテスト</p>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <div class="chat__form">
