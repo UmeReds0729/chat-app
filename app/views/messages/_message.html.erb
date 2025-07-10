@@ -2,5 +2,6 @@
   <div class="chat__messages-name"><%= message.user.name %><span class="chat__messages-date"><%= l message.created_at %></span></div>
   <div class="chat__messages-content">
     <p><%= message.content %></p>
+    <%= image_tag message.image.variant(resize: '500x500'), class: 'message-image' if message.image.attached? %>
   </div>
 </div>
